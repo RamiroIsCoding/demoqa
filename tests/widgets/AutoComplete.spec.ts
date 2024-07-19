@@ -8,7 +8,7 @@ test.beforeEach(async ({page}) => {
   await page.goto("https://demoqa.com/auto-complete");
 })
 
-test.describe("Type multiple color names tests", ()=>{
+test.describe("Type multiple color names tests", { tag: ['@smoke'] }, ()=>{
   test("Check auto complete suggestions", async ({page}) => {
     zebrunner.testCaseKey("DMQARM-1");
     const autoComplete: AutoCompletePage = new AutoCompletePage(page);

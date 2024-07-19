@@ -6,7 +6,7 @@ test.beforeEach(async ({page})=>{
   await page.goto("https://demoqa.com/radio-button");
 })
 
-test("Verify that the 'Yes' radio button can be selected", async ({ page }) => {
+test("Verify that the 'Yes' radio button can be selected", { tag: ['@smoke'] }, async ({ page }) => {
   zebrunner.testCaseKey("DMQARM-17");
   const radioButton: RadioButton = new RadioButton(page);
 

@@ -7,7 +7,7 @@ test.beforeEach(async ({page}) => {
   await page.goto("https://demoqa.com/checkbox");
 });
 
-test("Check every element is visible when expand all button is clicked", async ({page}) => {
+test("Check every element is visible when expand all button is clicked", { tag: ['@smoke'] }, async ({page}) => {
   zebrunner.testCaseKey("DMQARM-20");
   const checkBox: CheckBox = new CheckBox(page);
   await checkBox.buttonExpandAllLocator().click();

@@ -6,7 +6,7 @@ test.beforeEach(async ({page})=>{
   await page.goto("https://demoqa.com/buttons");
 })
 
-test("Check 'Double Click Me' button works correctly", async({page})=>{
+test("Check 'Double Click Me' button works correctly", { tag: ['@smoke'] }, async({page})=>{
   zebrunner.testCaseKey("DMQARM-7");
   const buttons: Buttons = new Buttons(page);
   await buttons.doubleClickButtonLocator().click();

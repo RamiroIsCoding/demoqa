@@ -6,7 +6,7 @@ test.beforeEach(async ({page})=>{
   await page.goto("https://demoqa.com/accordian");
 })
 
-test("Verify initial state", async ({page})=>{
+test("Verify initial state",{ tag: ['@smoke'] }, async ({page})=>{
   zebrunner.testCaseKey("DMQARM-10");
   const accordian: Accordian = new Accordian(page);
   expect(await accordian.cardBodyLocator(Header.WhatIs).isVisible()).toBeTruthy();

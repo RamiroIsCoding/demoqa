@@ -6,7 +6,7 @@ test.beforeEach(async ({ page }) => {
   await page.goto("https://demoqa.com/text-box");
 });
 
-test("Submit valid data and verify output", async ({ page }) => {
+test("Submit valid data and verify output", { tag: ['@smoke'] },async ({ page }) => {
   zebrunner.testCaseKey("DMQARM-24");
   const textBox: TextBox = new TextBox(page);
 
